@@ -44,17 +44,13 @@ void segment::imagePrepare(Mat sourceFrame){
 	int platItemCount = contourAll.size();
 	Rect wordArea;
 	vector<Point> contoursAppr;
-
 	for(int i=0;i<platItemCount;i++)  
     {  
 		approxPolyDP(Mat(contourAll[i]),contoursAppr,5,true);
 		wordArea = boundingRect(contoursAppr);
-		if(wordArea.height <= 10) continue;		
-//		cv::polylines(m4, contourAll[i], false,Scalar(255), 1);
-//		rectangle(m4,Point(wordArea.x,wordArea.y), Point(wordArea.x + wordArea.width, wordArea.y + wordArea.height), Scalar(255));
+		if(wordArea.height <= 10) continue;
 		drawContours(plateInfo,contourAll,i,Scalar(255),CV_FILLED);  
-    }
-	
+    }	
 	//ÏÔÊ¾Í¼Ïñ
 	imshow("imag4",plateInfo);	
 	

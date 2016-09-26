@@ -23,7 +23,10 @@ private:
 	vector<Rect> LocatePosition();
 	//矫正角度
 	vector<Mat> TurnPosition(vector<Rect>);
-
-	Mat sourceFrame;
+	//图像变量
+	Mat sourceFrame, grayFrame, shapeKernal;
+	//图像中的轮廓
+	vector<vector<Point> > contourAll;
+	vector<Vec4i> hierarchy;
 };
 
