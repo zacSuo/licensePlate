@@ -21,9 +21,15 @@
     <ClCompile Include="segment.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="position.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="segment.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="position.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
