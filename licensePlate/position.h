@@ -20,11 +20,13 @@ public:
 
 private:
 	//定位车牌
-	vector<Rect> LocatePosition();
+	vector<Rect> LocatePosition();	
+	//横向跳变检测
+	vector<int> HorizonJumpCheck(Mat,vector<Rect>);
 	//矫正角度
 	vector<Mat> TurnPosition(vector<Rect>);
 	//图像变量
-	Mat sourceFrame, grayFrame, shapeKernal;
+	Mat sourceFrame, shapeKernal;
 	//图像中的轮廓
 	vector<vector<Point> > contourAll;
 	vector<Vec4i> hierarchy;
